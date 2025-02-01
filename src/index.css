@@ -10,3 +10,15 @@
 	--color-selected: #2D2D2D;
 	--color-mid-accent: #9A9A9A;
 }
+
+h1 {
+	@apply text-6xl
+}
+
+h2 {
+	@apply text-5xl
+}
+
+h3 {
+	@apply text-4xl
+}

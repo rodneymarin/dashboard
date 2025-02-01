@@ -1,7 +1,7 @@
+import { FiBox, FiDollarSign, FiHome, FiSettings, FiUsers } from "react-icons/fi";
 import { Outlet } from "react-router-dom";
-import { NavbarLink } from "../components/navigation/NavbarLink";
 import { Navbar } from "../components/navigation/Navbar";
-import { FiBox, FiHome, FiMessageSquare, FiSettings, FiUsers } from "react-icons/fi";
+import { NavbarLink } from "../components/navigation/NavbarLink";
 
 
 export default function MainLayout() {
@@ -10,12 +10,12 @@ export default function MainLayout() {
 			<Navbar>
 				<NavbarLink to="dashboard"><FiHome className="w-6 h-6 shrink-0" /> Dashboard</NavbarLink>
 				<NavbarLink to="clients"><FiUsers className="w-6 h-6 shrink-0" />Clients</NavbarLink>
-				<NavbarLink to="messages"><FiMessageSquare className="w-6 h-6 shrink-0" />Messages</NavbarLink>
+				<NavbarLink to="sales"><FiDollarSign className="w-6 h-6 shrink-0" />Sales</NavbarLink>
 				<NavbarLink to="products"><FiBox className="w-6 h-6 shrink-0" />Products</NavbarLink>
 				<NavbarLink to="settings"><FiSettings className="w-6 h-6 shrink-0" />Settings</NavbarLink>
 			</Navbar>
-			<div className="pl-80">
-				<section className="flex flex-col gap-5 p-6">
+			<div className="pl-80 w-full">
+				<section className="flex flex-col gap-5 p-6 flex-1">
 					<Outlet />
 				</section>
 			</div>

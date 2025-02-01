@@ -7,9 +7,9 @@ interface NavbarProps {
 	children?: ReactElement<NavbarLink> | ReactElement<NavbarLink>[];
 }
 
-export function Navbar({ children, className }: NavbarProps) {
+export function Navbar({ children, className, ...props }: NavbarProps) {
 	return (
-		<nav className={cn("fixed flex flex-col gap-1.5 w-80 top-0 bottom-0 left-0 bg-background p-6", className)}>
+		<nav className={cn("fixed flex flex-col gap-1.5 w-80 top-0 bottom-0 left-0 bg-background p-6", className)} {...props}>
 			{children}
 		</nav>
 	);
