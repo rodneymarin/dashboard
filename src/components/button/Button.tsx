@@ -8,7 +8,7 @@ export type buttonIconLocation = "leading" | "trailing";
 
 const buttonStyles = {
 	base: {
-		background: "bg-neutral-200 disabled:bg-neutra-100 [&>span]:disabled:text-neutral-200 [&>div]:disabled:bg-neutral-100 [&>*]:disabled:pointer-events-none",
+		background: "bg-button-bg disabled:bg-disabled-bg [&>span]:disabled:text-disabled-fg [&>div]:disabled:bg-disabled-bg [&>*]:disabled:pointer-events-none",
 		text: ""
 	},
 	size: {
@@ -38,7 +38,7 @@ export function Button({ children, classNameBackground, classNameOverlay, classN
 	return (
 		<button
 			data-iconleading={iconLocation === "leading"}
-			className={cn("relative rounded-[10px] flex data-[iconleading=true]:flex-row data-[iconleading=false]:flex-col gap-1.5 justify-center items-center cursor-pointer overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed",
+			className={cn("relative rounded-md flex data-[iconleading=true]:flex-row data-[iconleading=false]:flex-col gap-1.5 justify-center items-center cursor-pointer overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed",
 				buttonStyles.size[size].background,
 				classNameBackground
 			)}
