@@ -1,15 +1,17 @@
-import { Client } from "./Client";
-import { Product } from "./Product";
+import { Client, ClientData } from "./Client";
+import { Product, ProductData } from "./Product";
 
 export interface SaleData {
-	product: Product;
+	id: string;
+	product: ProductData;
 	quantity: number;
 	price: number;
 	timeStamp: number;
-	buyer: Client;
+	buyer: ClientData;
 }
 
 export class Sale {
+	id: string;
 	product: Product;
 	quantity: number;
 	price: number;
@@ -17,11 +19,12 @@ export class Sale {
 	buyer: Client;
 
 	public constructor(data: SaleData) {
-		this.product = data.product;
+		this.id = data.id;
+		this.product = new Product(data.product);
 		this.quantity = data.quantity;
 		this.price = data.price;
 		this.timeStamp = data.timeStamp;
-		this.buyer = data.buyer;
+		this.buyer = new Client(data.buyer);
 	}
 
 	get getFormattedDate(): string {
