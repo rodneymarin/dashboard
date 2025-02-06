@@ -8,6 +8,7 @@
 	--color-foreground: #FFFFFF;
 	--color-card: #2B2B2B;
 	--color-selected: #2D2D2D;
+	--color-hover: #323232;
 	--color-mid-accent: #9A9A9A;
 }
 
@@ -26,3 +27,12 @@ h3 {
 h4 {
 	@apply text-2xl
 }
+
+::-webkit-scrollbar {
+    @apply w-2 h-2
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-card rounded-full;
+    
+  }

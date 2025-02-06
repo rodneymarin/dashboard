@@ -4,174 +4,174 @@
 		"firstName": "Wallie",
 		"lastName": "Haysar",
 		"gender": "Male",
-		"status": "disabled"
+		"status": "Disabled"
 	},
 	{
 		"id": "5ae51fda-dd23-4787-a6e7-2d022ef010ac",
 		"firstName": "Itch",
 		"lastName": "Bools",
 		"gender": "Male",
-		"status": "pending"
+		"status": "Active"
 	},
 	{
 		"id": "a9babed9-52cd-4a3f-9b23-2c7872b20741",
 		"firstName": "Marline",
 		"lastName": "Treece",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "2a8550d4-0f0f-4d2f-acb1-8bd9b3b7f362",
 		"firstName": "Ilise",
 		"lastName": "Nani",
 		"gender": "Female",
-		"status": "disabled"
+		"status": "Disabled"
 	},
 	{
 		"id": "c86d334e-91d3-4d67-8286-05cb4f31b8cf",
 		"firstName": "Rianon",
 		"lastName": "Ebbitt",
 		"gender": "Female",
-		"status": "disabled"
+		"status": "Active"
 	},
 	{
 		"id": "cbf74286-1a29-4338-9e4e-fe8812c0b6c9",
 		"firstName": "Dasi",
 		"lastName": "Curuclis",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Pending"
 	},
 	{
 		"id": "eeed9c1f-1f87-4034-8b1c-bf4462c6fb1a",
 		"firstName": "Joellyn",
 		"lastName": "Daice",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Active"
 	},
 	{
 		"id": "45197169-67e3-4624-9bb2-b9d31101fd80",
 		"firstName": "Teirtza",
 		"lastName": "Winslade",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "24764914-5dbd-42d4-9a4a-299700db9971",
 		"firstName": "Norrie",
 		"lastName": "Perez",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "c9a49991-be72-42b5-9bd8-7fa516bfe9f9",
 		"firstName": "Donica",
 		"lastName": "Wayvill",
 		"gender": "Female",
-		"status": "disabled"
+		"status": "Disabled"
 	},
 	{
 		"id": "0f1a54f4-d7d4-4ad6-a8f7-ff85501927d6",
 		"firstName": "Jacklyn",
 		"lastName": "Poore",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Pending"
 	},
 	{
 		"id": "475c88e1-f8c1-4038-876d-3090053c6a35",
 		"firstName": "Ann",
 		"lastName": "Quarmby",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "be47ee3b-c225-4267-ba41-1bc9dfb948cc",
 		"firstName": "Tedmund",
 		"lastName": "Turl",
 		"gender": "Male",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "b3dd1d80-1dce-4927-b87e-58dd0ffb77fa",
 		"firstName": "Sonny",
 		"lastName": "Adey",
 		"gender": "Male",
-		"status": "pending"
+		"status": "Active"
 	},
 	{
 		"id": "23e05a82-e46b-4f78-b70f-9bd6ea497479",
 		"firstName": "Kirstin",
 		"lastName": "Pexton",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Active"
 	},
 	{
 		"id": "3a06e392-5c0d-481d-a321-5163d0af965c",
 		"firstName": "Vina",
 		"lastName": "Ballantyne",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "7fa2915b-8539-43ed-b0f4-3a5d5467671d",
 		"firstName": "Bertie",
 		"lastName": "Munford",
 		"gender": "Female",
-		"status": "disabled"
+		"status": "Active"
 	},
 	{
 		"id": "5b45b705-e11d-4739-816a-dc82e8d3d8a9",
 		"firstName": "Lenna",
 		"lastName": "Locket",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	},
 	{
 		"id": "515071cf-d955-4ef5-b220-56e963dc4dba",
 		"firstName": "Inge",
 		"lastName": "Rowberry",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Active"
 	},
 	{
 		"id": "887931e5-86d8-4769-b963-2fb1c825d6b0",
 		"firstName": "Van",
 		"lastName": "Gladeche",
 		"gender": "Female",
-		"status": "disabled"
+		"status": "Active"
 	},
 	{
 		"id": "0ca92b62-656d-4bbb-be1e-adb328946ed2",
 		"firstName": "Petronia",
 		"lastName": "Heinicke",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Pending"
 	},
 	{
 		"id": "07c2fc82-d806-4eaf-96ca-94c8aead83c3",
 		"firstName": "Melessa",
 		"lastName": "Seeborne",
 		"gender": "Female",
-		"status": "disabled"
+		"status": "Disabled"
 	},
 	{
 		"id": "114e1910-674c-4e07-a303-2d0837c155d5",
 		"firstName": "Karolina",
 		"lastName": "Treadgold",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Pending"
 	},
 	{
 		"id": "d2ebf664-119c-43a7-ad90-da9935ba8650",
 		"firstName": "Othelia",
 		"lastName": "Yare",
 		"gender": "Female",
-		"status": "pending"
+		"status": "Active"
 	},
 	{
 		"id": "ce141be2-fbd5-47b8-a29e-73529c1f2dbc",
 		"firstName": "Rosalynd",
 		"lastName": "Raveau",
 		"gender": "Female",
-		"status": "active"
+		"status": "Active"
 	}
 ]

@@ -27,9 +27,23 @@ export class Sale {
 		this.buyer = new Client(data.buyer);
 	}
 
-	get getFormattedDate(): string {
+	get formattedDate(): string {
 		const newDate = new Date(this.timeStamp);
-		return newDate.toDateString();
+		return newDate.toLocaleDateString("es-US", { day: "2-digit", month: "2-digit", year: "numeric" });
+	}
+
+	get formattedPrice(): string {
+		const price = this.price.toLocaleString("EN-US", { style: "currency", currency: "USD" });
+		return price;
+	}
+
+	get total(): number {
+		return this.price * this.quantity;
+	}
+
+	get formattedTotal(): string {
+		const formatTotal = this.total.toLocaleString("EN-US", { style: "currency", currency: "USD" });
+		return formatTotal;
 	}
 }
 

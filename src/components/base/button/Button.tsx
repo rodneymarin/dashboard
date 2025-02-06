@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
 import { LuLoader } from "react-icons/lu";
-import { cn } from "../../utils/utils";
+import { cn } from "../../../utils/utils";
 
 export type buttonSizes = "default" | "sm";
 export type buttonIconLocation = "leading" | "trailing";

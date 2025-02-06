@@ -7,8 +7,8 @@ interface PageLayoutProps extends PropsWithChildren {
 export function PageLayout({ children, title }: PageLayoutProps) {
 	return (
 		<>
-			<h3>{title}</h3>
-			<div className="w-full overflow-y-auto flex flex-col gap-3">
+			<h3 className="w-full">{title}</h3>
+			<div className="w-full overflow-y-auto flex flex-col gap-9 pr-2">
 				{children}
 			</div>
 		</>
