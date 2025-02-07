@@ -9,8 +9,8 @@ export default function MainLayout() {
 		<main className="w-screen h-screen bg-background flex text-foreground">
 			<Navbar>
 				<NavbarLink to="dashboard"><FiHome className="w-6 h-6 shrink-0" />Dashboard</NavbarLink>
-				<NavbarLink to="clients"><FiUsers className="w-6 h-6 shrink-0" />Clients</NavbarLink>
 				<NavbarLink to="sales"><FiDollarSign className="w-6 h-6 shrink-0" />Sales</NavbarLink>
+				<NavbarLink to="clients"><FiUsers className="w-6 h-6 shrink-0" />Clients</NavbarLink>
 				<NavbarLink to="products"><FiBox className="w-6 h-6 shrink-0" />Products</NavbarLink>
 				<NavbarLink to="settings"><FiSettings className="w-6 h-6 shrink-0" />Settings</NavbarLink>
 			</Navbar>

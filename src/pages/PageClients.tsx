@@ -9,7 +9,7 @@ export default function PageClients() {
 		<PageLayout title="Clients">
 			<div className="flex flex-col gap-1.5">
 				{
-					clients?.map(client => {
+					clients?.sort((a, b) => a.firstName.localeCompare(b.firstName)).map(client => {
 						const sale = sales?.find(s => s.buyer.id === client.id);
 						return (
 							<Accordion title={client.fullName}>
@@ -28,7 +28,7 @@ export default function PageClients() {
 											{client.status}
 										</div>
 									</div>
-									Last bought on {sale?.formattedDate} for {sale?.formattedTotal}
+									Recent purchase at {sale?.formattedDate} for {sale?.formattedTotal}
 								</div>
 							</Accordion>);
 					})

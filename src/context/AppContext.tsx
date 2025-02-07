@@ -73,7 +73,7 @@ export function AppContextProvider({ children }: AppContextProps) {
 	function fetchSales() {
 		if (!clients || !products) return;
 
-		const newSales: Sale[] = Array.from({ length: 85 }, () => {
+		const newSales: Sale[] = Array.from({ length: 1000 }, () => {
 			const randomProduct = products[Math.floor(Math.random() * products.length)];
 			const randomClient = clients[Math.floor(Math.random() * clients.length)];
 			const newSale: Sale = new Sale({
@@ -81,7 +81,7 @@ export function AppContextProvider({ children }: AppContextProps) {
 				product: randomProduct,
 				quantity: Math.floor((Math.random() * 25) + 10),
 				price: Math.floor((Math.random() * 500) + 125),
-				timeStamp: randomDate(new Date(2024, 1, 1), new Date()).getTime(),
+				timeStamp: randomDate(new Date(2024, 5, 5), new Date()).getTime(),
 				buyer: randomClient
 			});
 			return newSale;

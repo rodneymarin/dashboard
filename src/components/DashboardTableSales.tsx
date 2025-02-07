@@ -6,11 +6,11 @@ import { TableHead } from "./base/table/TableHead";
 import { TableHeader } from "./base/table/TableHeader";
 import { TableRow } from "./base/table/TableRow";
 
-interface TableSalesProps {
+interface DashboardTableSalesProps {
 	limit: number;
 }
 
-export function TableSales({ limit }: TableSalesProps) {
+export function DashboardTableSales({ limit }: DashboardTableSalesProps) {
 	const { sales } = useAppContext();
 
 	return (

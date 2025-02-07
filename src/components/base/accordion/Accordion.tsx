@@ -23,10 +23,10 @@ export function Accordion({ title, subtitle, classNameTitle, classNameSubtitle, 
 	}
 
 	return (
-		<div data-open={isOpen} className={cn("bg-card hover:bg-hover w-full rounded-sm data-[open=false]:cursor-pointer", classNameWrapper)} {...props}>
+		<div data-open={isOpen} className={cn("bg-card w-full rounded-sm data-[open=false]:cursor-pointer", classNameWrapper)} {...props}>
 			<div
 				data-open={isOpen}
-				className={cn("flex w-full py-3 cursor-pointer gap-1.5 border-background data-[open=true]:border-b-2 data-[open=false]:border-b-0", classNameHeader)}
+				className={cn("flex w-full hover:bg-hover py-3 cursor-pointer gap-1.5 border-background data-[open=true]:border-b-2 data-[open=false]:border-b-0", classNameHeader)}
 				onClick={() => handleHeaderClick()}
 			>
 				<div className="flex px-6 justify-between items-center w-full gap-3">

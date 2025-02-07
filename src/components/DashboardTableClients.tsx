@@ -6,11 +6,11 @@ import { TableHead } from "./base/table/TableHead";
 import { TableHeader } from "./base/table/TableHeader";
 import { TableRow } from "./base/table/TableRow";
 
-interface TableClientsProps {
+interface DashboardTableClientsProps {
 	limit: number;
 }
 
-export function TableClients({ limit }: TableClientsProps) {
+export function DashboardTableClients({ limit }: DashboardTableClientsProps) {
 	const { clients } = useAppContext();
 
 	return (
