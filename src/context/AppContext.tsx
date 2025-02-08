@@ -52,7 +52,7 @@ export function AppContextProvider({ children }: AppContextProps) {
 
 	async function fetchProducts() {
 		try {
-			const response = await fetch("src/data/products_data.json");
+			const response = await fetch("https://api.escuelajs.co/api/v1/products");
 			if (!response.ok) {
 				console.error("error fetching products");
 			}

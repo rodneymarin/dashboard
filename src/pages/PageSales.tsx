@@ -2,9 +2,11 @@ import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import { Card } from "../components/base/card/Card";
 import { useAppContext } from "../context/AppContext";
 import { PageLayout } from "../layout/PageLayout";
+import { useViewportWidthMatch, ViewportBreakpoint } from "../hooks/useViewportWidthMatch";
 
 export default function PageClients() {
 	const { sales, products } = useAppContext();
+	const isMobile = useViewportWidthMatch((value) => value < ViewportBreakpoint.md);
 
 	const totalSales = sales?.reduce((sum, value) => value.price + sum, 0);
 	const orderMonth = sales?.filter(sale => {
@@ -15,26 +17,30 @@ export default function PageClients() {
 	const averagePurchase = (totalSales ?? 0) / (sales?.length ?? 0);
 	const fakeGrowth = Math.random();
 	const salesMonths = [
-		{ month: "Jan", value: (Math.random() * 12000 + 890) },
-		{ month: "Feb", value: (Math.random() * 12000 + 890) },
-		{ month: "Mar", value: (Math.random() * 12000 + 890) },
-		{ month: "Apr", value: (Math.random() * 12000 + 890) },
-		{ month: "May", value: (Math.random() * 12000 + 890) },
-		{ month: "Jun", value: (Math.random() * 12000 + 890) },
-		{ month: "Jul", value: (Math.random() * 12000 + 890) },
-		{ month: "Ago", value: (Math.random() * 12000 + 890) },
-		{ month: "Sep", value: (Math.random() * 12000 + 890) },
-		{ month: "Oct", value: (Math.random() * 12000 + 890) },
-		{ month: "Nov", value: (Math.random() * 12000 + 890) },
-		{ month: "Dec", value: (Math.random() * 12000 + 890) },
+		{ month: "Jan", value: (Math.random() * 12000 + 6000) },
+		{ month: "Feb", value: (Math.random() * 12000 + 6000) },
+		{ month: "Mar", value: (Math.random() * 12000 + 6000) },
+		{ month: "Apr", value: (Math.random() * 12000 + 6000) },
+		{ month: "May", value: (Math.random() * 12000 + 6000) },
+		{ month: "Jun", value: (Math.random() * 12000 + 6000) },
+		{ month: "Jul", value: (Math.random() * 12000 + 6000) },
+		{ month: "Ago", value: (Math.random() * 12000 + 6000) },
+		{ month: "Sep", value: (Math.random() * 12000 + 6000) },
+		{ month: "Oct", value: (Math.random() * 12000 + 6000) },
+		{ month: "Nov", value: (Math.random() * 12000 + 6000) },
+		{ month: "Dec", value: (Math.random() * 12000 + 6000) },
 	];
 	const salesByProduct = products?.map(product => {
 		const saleByProd = sales?.filter(sale => sale.product.id === product.id).reduce((sum, val) => sum + val.total, 0);
 		return {
-			product: product.name,
+			product: product.title,
 			value: saleByProd
 		};
-	}) ?? [];
+	}).sort((a, b) => (b.value ?? 0) - (a.value ?? 0)).slice(0, 8) ?? [];
+
+	function formatterFunction(value: number) {
+		return value.toLocaleString("EN-US", { style: "currency", currency: "USD" });
+	}
 
 	console.log({ salesByProduct });
 
@@ -61,21 +67,21 @@ export default function PageClients() {
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-3">
 				<Card title="Sales last year">
-					<ResponsiveContainer width="100%" height="100%" aspect={500 / 300} >
-						<BarChart width={600} height={600} data={salesMonths}>
-							<Bar dataKey="value" fill="#4CC2FF" />
+					<ResponsiveContainer width="100%" height="100%" aspect={isMobile ? 0.4 : 0.8} >
+						<BarChart data={salesMonths}>
+							<Bar radius={[isMobile ? 2 : 6, isMobile ? 2 : 6, 0, 0]} dataKey="value" fill="#136691" />
 							<XAxis dataKey="month" />
 							<YAxis />
 						</BarChart>
 					</ResponsiveContainer>
 				</Card>
 
-				<Card title="Sales by product">
-					<ResponsiveContainer width="100%" height="100%" aspect={500 / 300} >
-						<BarChart width={600} height={600} data={salesByProduct} layout="vertical">
-							<Bar dataKey="value" fill="#4CC2FF" />
+				<Card title="Top 8 products by sales">
+					<ResponsiveContainer width="100%" height="100%" aspect={isMobile ? 0.4 : 0.8} >
+						<BarChart data={salesByProduct} layout="vertical">
+							<Bar label={{ position: "outside", fill: "white", formatter: formatterFunction }} radius={[0, isMobile ? 4 : 6, isMobile ? 4 : 6, 0]} dataKey="value" fill="#136691" />
 							<XAxis type="number" />
-							<YAxis type="category" dataKey="product" width={210} />
+							<YAxis type="category" dataKey="product" width={100} />
 						</BarChart>
 					</ResponsiveContainer>
 				</Card>

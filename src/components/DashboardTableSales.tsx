@@ -31,7 +31,7 @@ export function DashboardTableSales({ limit }: DashboardTableSalesProps) {
 					{sales?.sort((a, b) => b.timeStamp - a.timeStamp).slice(0, limit).map((sale) => {
 						return (
 							<TableRow key={sale.id} className="hover:bg-hover px-6">
-								<TableCell className="flex-1">{sale.product.name}</TableCell>
+								<TableCell className="flex-1">{sale.product.title}</TableCell>
 								<TableCell className="w-[12ch]">{sale.formattedDate}</TableCell>
 								<TableCell className="w-[6ch] text-center">{sale.quantity}</TableCell>
 								<TableCell className="w-[10ch] text-center">{sale.formattedPrice}</TableCell>
@@ -50,7 +50,7 @@ export function DashboardTableSales({ limit }: DashboardTableSalesProps) {
 					return (
 						<div className="w-full flex flex-col py-6 hover:bg-hover">
 							<div className="flex flex-col px-6">
-								<div className="w-full">{sale.product.name}</div>
+								<div className="w-full">{sale.product.title}</div>
 								<div className="w-full text-mid-accent">Bought at: {sale.formattedDate}</div>
 								<div className="w-full flex gap-x-3 flex-wrap">
 									<span className="">Quantity: {sale.quantity}</span> <span className="">Price: {sale.formattedPrice}</span> <span className="">Total: {sale.formattedTotal}</span>

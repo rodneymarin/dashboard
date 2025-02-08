@@ -1,30 +1,24 @@
-export enum ProductStatus {
-	published = "Published",
-	paused = "Paused",
-	discontinued = "Discontinued"
-}
-
 export interface ProductData {
 	id: string;
-	name: string;
+	title: string;
 	price: number;
-	inventory: number;
-	status: ProductStatus;
+	description: string;
+	images: Array<string>;
 }
 
 export class Product {
 	id: string;
-	name: string;
+	title: string;
 	price: number;
-	inventory: number;
-	status: ProductStatus;
+	description: string;
+	images: Array<string>;
 
 	constructor(data: ProductData) {
 		this.id = data.id;
-		this.name = data.name;
+		this.title = data.title;
 		this.price = data.price;
-		this.inventory = data.inventory;
-		this.status = data.status;
+		this.description = data.description;
+		this.images = data.images;
 	}
 
 	get formattedPrice(): string {
