@@ -34,7 +34,7 @@ export function AppContextProvider({ children }: AppContextProps) {
 		try {
 			const response = await fetch("./clients_data.json");
 			if (!response.ok) {
-				console.error("error fetching clients");
+				console.error("error fetching clients", response);
 			}
 			const json = await response.json();
 			const newClients: Client[] = [];
