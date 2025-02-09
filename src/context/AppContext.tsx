@@ -32,7 +32,7 @@ export function AppContextProvider({ children }: AppContextProps) {
 
 	async function fetchClients() {
 		try {
-			const response = await fetch("src/data/clients_data.json");
+			const response = await fetch("./clients_data.json");
 			if (!response.ok) {
 				console.error("error fetching clients");
 			}

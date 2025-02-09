@@ -4,7 +4,7 @@ import PageDashboard from "./pages/PageDashboard";
 import PageClients from "./pages/PageClients";
 import PageSales from "./pages/PageSales";
 import PageProducts from "./pages/PageProducts";
-import PageSettings from "./pages/PageSettings";
+import PageAbout from "./pages/PageAbout";
 import { AppContextProvider } from "./context/AppContext";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route path="clients" element={<PageClients />} />
             <Route path="sales" element={<PageSales />} />
             <Route path="products" element={<PageProducts />} />
-            <Route path="settings" element={<PageSettings />} />
+            <Route path="about" element={<PageAbout />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,10 @@
 import { NavLink, NavLinkProps, useLocation } from "react-router-dom";
 import { cn } from "../../../utils/utils";
 
-export interface NavbarLink extends NavLinkProps { }
+export interface NavbarLink extends NavLinkProps {
+
+}
+
 
 export function NavbarLink({ children, className, to, ...props }: NavbarLink) {
 	const location = useLocation();

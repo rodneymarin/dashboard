@@ -30,9 +30,9 @@ export function Accordion({ title, subtitle, classNameTitle, classNameSubtitle, 
 				onClick={() => handleHeaderClick()}
 			>
 				<div className="flex px-6 justify-between items-center w-full gap-3">
-					<div className="flex w-full justify-between items-center">
-						<span className={cn("", classNameTitle)}>{title}</span>
-						<span className={cn("", classNameSubtitle)}>{subtitle}</span>
+					<div className="flex w-full justify-between items-center gap-2">
+						<span className={cn("line-clamp-1", classNameTitle)}>{title}</span>
+						<span className={cn("n shrink-0", classNameSubtitle)}>{subtitle}</span>
 					</div>
 					<ChevronIcon open={isOpen} />
 				</div>

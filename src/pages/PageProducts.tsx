@@ -1,34 +1,36 @@
 import { Accordion } from "../components/base/accordion/Accordion";
+import FilePreviewer from "../components/base/images/FilePreviewer";
 import { useAppContext } from "../context/AppContext";
 import { PageLayout } from "../layout/PageLayout";
 
 export default function PageProducts() {
-	const { clients, sales } = useAppContext();
+	const { products } = useAppContext();
 
 	return (
-		<PageLayout title="Clients">
+		<PageLayout title="Products">
 			<div className="flex flex-col gap-1.5">
 				{
-					clients?.sort((a, b) => a.firstName.localeCompare(b.firstName)).map(client => {
-						const sale = sales?.find(s => s.buyer.id === client.id);
+					products?.map(product => {
 						return (
-							<Accordion title={client.fullName}>
+							<Accordion title={product.title} subtitle={product.formattedPrice}>
 								<div className="flex flex-col gap-3 px-6">
-									<div className="flex gap-2">
-										<span className="text-mid-accent">{client.id}</span>
-										{"- "}
-										{client.fullName}
-									</div>
-									<div className="flex gap-2">
-										<span>{client.gender}</span>
-										<div
-											data-status={client.status}
-											className="w-fit px-3 py-1 rounded-full text-mid-accent text-xs data-[status=Disabled]:bg-disabled-bg data-[status=Pending]:bg-yellow-700/20 data-[status=Active]:bg-green-700/20"
-										>
-											{client.status}
+									<div className="flex flex-col gap-6">
+										<div className="flex flex-col gap-1	">
+											Title
+											<span className="text-mid-accent">{product.title}</span>
+										</div>
+										<div className="flex flex-col gap-1">
+											Description
+											<span className="text-mid-accent">{product.description}</span>
+										</div>
+										<div className="flex gap-2 flex-wrap">
+											{
+												product.images.map(image => {
+													return <div className="max-w-32 md:max-w-3xs"><FilePreviewer fileURL={image} /></div>;
+												})
+											}
 										</div>
 									</div>
-									Recent purchase at {sale?.formattedDate} for {sale?.formattedTotal}
 								</div>
 							</Accordion>);
 					})
