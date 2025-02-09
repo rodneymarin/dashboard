@@ -11,7 +11,7 @@ function App() {
 
   return (
     <AppContextProvider>
-      <BrowserRouter>
+      <BrowserRouter >
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Navigate to="/dashboard" />} />
